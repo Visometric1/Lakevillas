@@ -1,0 +1,861 @@
+﻿<krpano version="1.19" title="Lake houses Tour">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="false"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               gyro="true"
+	               webvr="true"
+	               webvr_gyro_keeplookingdirection="false"
+	               webvr_prev_next_hotspots="true"
+	               littleplanetintro="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="true"
+	               thumbs_text="true"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE|KEEPVIEW"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext="loading..."
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+
+
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_19_54_37_62" title="Street view" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_19_54_37_62.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_19_54_37_62.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_19_54_37_62.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_19_54_37_62.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_19_54_37_62.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="67.150" atv="4.469" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_19_57_53_40" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-50.171" atv="7.029" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_54_30_60" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-3.945" atv="3.933" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_59_57_37" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="16.231" atv="4.027" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_51_49_66" />
+
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_19_57_53_40" title="House1-street view" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_19_57_53_40.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_19_57_53_40.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_19_57_53_40.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_19_57_53_40.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_19_57_53_40.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-88.181" atv="6.829" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_19_54_37_62" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-82.809" atv="2.179" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_54_30_60" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-1.826" atv="12.013" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_08_29_62" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_08_29_62" title="House1-entrance" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_08_29_62.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_08_29_62.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_08_29_62.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_08_29_62.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_08_29_62.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-174.470" atv="15.190" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_19_57_53_40" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="92.436" atv="9.824" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_20_47_38" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="14.659" atv="10.382" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_09_55_25" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-0.416" atv="26.184" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_45_42_45" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_09_55_25" title="House1-alrum" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_09_55_25.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_09_55_25.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_09_55_25.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_09_55_25.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_09_55_25.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-175.466" atv="14.163" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_08_29_62" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="1.413" atv="11.175" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_12_55_72" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-29.835" atv="12.252" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_15_01_43" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="105.384" atv="8.644" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_23_24_97" />
+
+	</scene>
+
+
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_12_55_72" title="House1-living" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_12_55_72.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_12_55_72.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_12_55_72.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_12_55_72.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_12_55_72.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="173.313" atv="11.740" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_09_55_25" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-167.430" atv="12.930" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_15_01_43" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-9.972" atv="15.139" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_28_59_21" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="136.794" atv="7.252" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_23_24_97" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_15_01_43" title="House1-bedroom" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_15_01_43.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_15_01_43.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_15_01_43.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_15_01_43.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_15_01_43.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-154.807" atv="9.541" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_18_05_54" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="88.326" atv="30.040" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_12_55_72" />
+
+	</scene>
+
+
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_18_05_54" title="House1-master bathroom2" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_18_05_54.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_18_05_54.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_18_05_54.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_18_05_54.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_18_05_54.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="20.294" atv="10.859" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_15_01_43" />
+
+	</scene>
+
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_20_47_38" title="House1-bryggers" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_20_47_38.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_20_47_38.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_20_47_38.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_20_47_38.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_20_47_38.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="34.269" atv="10.515" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_23_24_97" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-88.641" atv="25.073" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_08_29_62" />
+
+	</scene>
+
+
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_23_24_97" title="House1-terrace" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_23_24_97.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_23_24_97.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_23_24_97.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_23_24_97.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_23_24_97.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-168.706" atv="16.379" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_20_47_38" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="11.597" atv="17.467" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_43_44_46" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-77.864" atv="4.354" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_09_55_25" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-45.123" atv="6.723" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_12_55_72" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="43.791" atv="12.629" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_33_27_92" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_28_59_21" title="House1-bbq terrace" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_28_59_21.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_28_59_21.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_28_59_21.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_28_59_21.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_28_59_21.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-170.326" atv="12.218" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_12_55_72" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="109.749" atv="21.053" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_33_27_92" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-74.614" atv="4.498" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_21_56_07" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="11.247" atv="26.837" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_30_45_60" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="36.812" atv="26.161" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_43_44_46" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="-22.532" atv="18.621" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_36_14_62" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_30_45_60" title="Aerial view1" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_30_45_60.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_30_45_60.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_30_45_60.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_30_45_60.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_30_45_60.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="9.575" atv="6.804" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_28_59_21" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="71.668" atv="3.652" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_21_56_07" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="66.993" atv="16.745" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_29_17_13" />
+		
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="87.214" atv="19.235" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_32_11_82" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="-131.620" atv="34.214" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_43_44_46" />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="-37.999" atv="15.511" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_33_27_92" />
+		<hotspot name="spot8" style="skin_hotspotstyle" ath="-21.044" atv="2.618" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_23_24_97" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="130.061" atv="29.705" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_36_14_62" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_33_27_92" title="Aerial view2" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_33_27_92.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_33_27_92.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_33_27_92.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_33_27_92.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_33_27_92.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-89.721" atv="4.718" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_28_59_21" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-150.445" atv="4.504" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_23_24_97" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="3.257" atv="26.556" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_43_44_46" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-58.488" atv="5.630" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_30_45_60" />
+
+	</scene>
+
+
+
+
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_45_42_45" title="House1-wineroom" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_45_42_45.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_45_42_45.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_45_42_45.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_45_42_45.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_45_42_45.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-167.720" atv="-13.966" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_08_29_62" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-82.306" atv="9.544" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_49_59_77" />
+
+	</scene>
+
+
+
+
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_49_59_77" title="House1-back entrance" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_49_59_77.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_49_59_77.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_49_59_77.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_49_59_77.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_49_59_77.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="178.683" atv="-17.107" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_51_49_66" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="89.998" atv="13.868" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_45_42_45" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_51_49_66" title="House1-garage" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_51_49_66.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_51_49_66.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_51_49_66.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_51_49_66.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_51_49_66.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-160.748" atv="2.061" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_19_54_37_62" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="4.223" atv="34.858" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_49_59_77" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_54_30_60" title="House2-street view" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_54_30_60.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_54_30_60.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_54_30_60.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_54_30_60.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_54_30_60.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="81.112" atv="9.858" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_19_54_37_62" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="82.398" atv="3.649" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_19_57_53_40" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="23.305" atv="4.843" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_59_57_37" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-5.903" atv="9.939" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_01_26_10" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-51.268" atv="6.720" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_38_20_66" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_20_59_57_37" title="House2-garage" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_59_57_37.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_59_57_37.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_59_57_37.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_59_57_37.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_20_59_57_37.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-82.317" atv="18.341" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_01_26_10" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-135.635" atv="6.778" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_54_30_60" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="174.690" atv="6.906" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_19_54_37_62" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="1.560" atv="16.157" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_26_05_17" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_01_26_10" title="House2-entrance" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_01_26_10.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_01_26_10.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_01_26_10.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_01_26_10.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_01_26_10.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="92.697" atv="4.792" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_59_57_37" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-17.831" atv="19.478" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_03_59_66" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_03_59_66" title="House2-hallway" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_03_59_66.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_03_59_66.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_03_59_66.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_03_59_66.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_03_59_66.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="148.693" atv="11.225" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_01_26_10" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-25.814" atv="12.685" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_05_23_31" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_05_23_31" title="House2-hallway2" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_05_23_31.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_05_23_31.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_05_23_31.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_05_23_31.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_05_23_31.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="16.445" atv="7.551" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_14_45_97" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="137.507" atv="13.928" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_03_59_66" />
+
+	</scene>
+
+
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_14_45_97" title="House2-alrum" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_14_45_97.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_14_45_97.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_14_45_97.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_14_45_97.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_14_45_97.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="77.068" atv="12.333" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_20_26_61" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="150.992" atv="9.357" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_17_24_78" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-160.488" atv="15.781" linkedscene="scene_vsv_tour_360-stereo_2017_06_16_-_11_49_06_33" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-7.377" atv="18.342" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_21_56_07" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_17_24_78" title="House2-kitchen" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_17_24_78.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_17_24_78.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_17_24_78.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_17_24_78.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_17_24_78.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="28.682" atv="17.907" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_20_26_61" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-41.688" atv="20.778" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_14_45_97" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-25.665" atv="14.948" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_21_56_07" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-109.836" atv="17.164" linkedscene="scene_vsv_tour_360-stereo_2017_06_16_-_11_49_06_33" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_20_26_61" title="House2-alrum view" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_20_26_61.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_20_26_61.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_20_26_61.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_20_26_61.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_20_26_61.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-94.439" atv="17.449" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_14_45_97" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-165.050" atv="12.084" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_17_24_78" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-61.231" atv="14.481" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_21_56_07" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-128.586" atv="9.428" linkedscene="scene_vsv_tour_360-stereo_2017_06_16_-_11_49_06_33" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_21_56_07" title="House2-terrace" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_21_56_07.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_21_56_07.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_21_56_07.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_21_56_07.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_21_56_07.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="119.283" atv="36.670" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_29_17_13" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="138.837" atv="11.645" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_24_19_64" />
+		
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="72.392" atv="15.273" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_43_44_46" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-166.853" atv="11.142" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_14_45_97" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="48.295" atv="26.127" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_36_14_62" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_24_19_64" title="House2-terrace corner" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_24_19_64.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_24_19_64.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_24_19_64.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_24_19_64.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_24_19_64.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="164.567" atv="7.542" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_26_05_17" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-78.005" atv="11.392" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_21_56_07" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-62.745" atv="41.342" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_29_17_13" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-46.971" atv="32.741" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_32_11_82" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="53.117" atv="6.580" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_30_45_60" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="41.909" atv="17.253" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_43_44_46" />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="2.198" atv="22.534" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_36_14_62" />
+		<hotspot name="spot8" style="skin_hotspotstyle" ath="-133.835" atv="29.933" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_20_26_61" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_26_05_17" title="House2-terrace stairs" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_26_05_17.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_26_05_17.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_26_05_17.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_26_05_17.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_26_05_17.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-6.307" atv="8.506" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_24_19_64" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-2.053" atv="18.173" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_29_17_13" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-172.742" atv="8.790" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_59_57_37" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_29_17_13" title="House2-terrace basement" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_29_17_13.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_29_17_13.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_29_17_13.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_29_17_13.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_29_17_13.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-79.844" atv="-13.023" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_21_56_07" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="174.131" atv="-8.131" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_26_05_17" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="0.954" atv="10.410" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_36_14_62" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="43.039" atv="14.013" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_43_44_46" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_32_11_82" title="House2-jacuzzi" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_32_11_82.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_32_11_82.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_32_11_82.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_32_11_82.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_32_11_82.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="148.835" atv="-15.636" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_29_17_13" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="65.446" atv="8.236" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_43_44_46" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="42.995" atv="-12.010" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_36_14_62" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_36_14_62" title="Aerial view 3" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_36_14_62.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_36_14_62.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_36_14_62.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_36_14_62.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_36_14_62.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="120.498" atv="12.039" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_30_45_60" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="131.887" atv="-0.204" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_28_59_21" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-158.904" atv="2.263" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_21_56_07" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="179.090" atv="17.182" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_29_17_13" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-152.009" atv="34.315" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_32_11_82" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="70.219" atv="20.695" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_43_44_46" />
+		
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_38_20_66" title="House2-back entrance" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_38_20_66.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_38_20_66.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_38_20_66.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_38_20_66.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_38_20_66.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="121.597" atv="5.229" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_54_30_60" />
+
+	</scene>
+
+
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_15_-_21_43_44_46" title="Lake view" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_43_44_46.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_43_44_46.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_43_44_46.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_43_44_46.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_15_-_21_43_44_46.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-156.476" atv="-19.019" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_28_59_21" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-131.638" atv="-14.191" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_21_56_07" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-122.269" atv="-5.410" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_32_11_82" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="178.883" atv="-12.145" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_33_27_92" />
+
+	</scene>
+
+	<scene name="scene_VSV_Tour_360-Stereo_2017_06_16_-_11_49_06_33" title="House2-alrum" onstart="" thumburl="panos/VSV_Tour_360-Stereo_2017_06_16_-_11_49_06_33.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/VSV_Tour_360-Stereo_2017_06_16_-_11_49_06_33.tiles/preview.jpg" />
+
+		<image type="CUBE" stereo="true" stereolabels="1|2" multires="true" tilesize="512">
+			<level tiledimagewidth="2624" tiledimageheight="2624">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_16_-_11_49_06_33.tiles/%t/%s/l3/%v/l3_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1280" tiledimageheight="1280">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_16_-_11_49_06_33.tiles/%t/%s/l2/%v/l2_%t/%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="640">
+				<cube url="panos/VSV_Tour_360-Stereo_2017_06_16_-_11_49_06_33.tiles/%t/%s/l1/%v/l1_%t/%s_%v_%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="179.237" atv="18.233" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_05_23_31" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="26.613" atv="14.733" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_14_45_97" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="53.512" atv="5.580" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_20_26_61" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="6.695" atv="8.051" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_21_56_07" />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="91.203" atv="13.154" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_17_24_78" />
+
+	</scene>
+
+
+</krpano>
