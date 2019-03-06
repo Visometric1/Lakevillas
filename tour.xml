@@ -2,6 +2,8 @@
 
 	<include url="skin/vtourskin.xml" />
 
+
+
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
 	<skin_settings maps="false"
 	               maps_type="google"
@@ -16,7 +18,7 @@
 	               title="true"
 	               thumbs="true"
 	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
-	               thumbs_opened="true"
+	               thumbs_opened="false"
 	               thumbs_text="true"
 	               thumbs_dragging="true"
 	               thumbs_onhoverscrolling="false"
@@ -60,9 +62,9 @@
 	-->
 	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
 	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
-	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	 <include url="skin/vtourskin_design_ultra_light.xml" />
 	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
-	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+ <!--<include url="skin/vtourskin_design_117round.xml"    /> -->
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 
 
@@ -338,7 +340,7 @@
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="9.575" atv="6.804" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_28_59_21" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="71.668" atv="3.652" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_21_56_07" />
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="66.993" atv="16.745" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_29_17_13" />
-		
+
 		<hotspot name="spot5" style="skin_hotspotstyle" ath="87.214" atv="19.235" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_32_11_82" />
 		<hotspot name="spot6" style="skin_hotspotstyle" ath="-131.620" atv="34.214" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_43_44_46" />
 		<hotspot name="spot7" style="skin_hotspotstyle" ath="-37.999" atv="15.511" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_20_33_27_92" />
@@ -653,7 +655,7 @@
 		</image>
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="119.283" atv="36.670" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_29_17_13" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="138.837" atv="11.645" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_24_19_64" />
-		
+
 		<hotspot name="spot4" style="skin_hotspotstyle" ath="72.392" atv="15.273" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_43_44_46" />
 		<hotspot name="spot5" style="skin_hotspotstyle" ath="-166.853" atv="11.142" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_14_45_97" />
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="48.295" atv="26.127" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_36_14_62" />
@@ -781,7 +783,7 @@
 		<hotspot name="spot4" style="skin_hotspotstyle" ath="179.090" atv="17.182" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_29_17_13" />
 		<hotspot name="spot5" style="skin_hotspotstyle" ath="-152.009" atv="34.315" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_32_11_82" />
 		<hotspot name="spot6" style="skin_hotspotstyle" ath="70.219" atv="20.695" linkedscene="scene_vsv_tour_360-stereo_2017_06_15_-_21_43_44_46" />
-		
+
 
 	</scene>
 
